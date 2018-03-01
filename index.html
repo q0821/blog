@@ -61,6 +61,56 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-lvenotsave" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="2018/03/02/lvenotsave/" class="article-date">
+  <time datetime="2018-03-01T16:35:15.000Z" itemprop="datePublished">2018-03-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="2018/03/02/lvenotsave/">WHM LVE 管理器設定無法儲存</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>今天客戶的網站因為人數太多導致 Resource Limit Is Reached，想到我們的主機有使用 Cloudlinux，裡面的 Concurrent Connections 設定了一個數值 ，已經滿了，於是在 WHM 後台的 LVE 管理器，要設定這個客戶，提升他的 Concurrent Connections，讓他可以恢復正常連線，但是設定好後，畫面卻一直停留在 Saved settings…，沒有辦法順利儲存。<br>後來 Shingo 找了找論壇，看到了這篇<a href="https://forums.cpanel.net/threads/settings-are-not-being-saved-in-the-cloudlinux-lve-manager.519291/" title="Settings are not being saved in the CloudLinux LVE Manager" target="_blank" rel="noopener">Settings are not being saved in the CloudLinux LVE Manager</a>，裡面提到執行以下指令，就可以順利儲存設定了。<br><code>yum install lvemanager</code><br>ssh 登入執行後，在 WHM 的介面裡面的 LVE 管理器就更新了，就可以順利儲存了。</p>
+<p>順帶一提 LVE 管理器的設定值的英文說明</p>
+<ul>
+<li>ID：user name if LVE id matches user id in /etc/passwd, or LVE id</li>
+<li>EP：number of entry processes (concurrent scripts executed)</li>
+<li>PNO：number of processes within LVE</li>
+<li>TNO：number of threads within LVE</li>
+<li>CPU：CPU usage by LVE, relative to total CPU resources of the server</li>
+<li>MEM：Memory usage by LVE, in KB</li>
+<li>I/O：I/O usage</li>
+<li>IOPS：number of read/write operations per second</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://q0821.github.io/blog/2018/03/02/lvenotsave/" data-id="cje8qviou0000i1u6n3n5kj6s" class="article-share-link">Teilen</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/WHM-Cloudlinux-LVE/">WHM,Cloudlinux,LVE</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="2018/03/01/hello-world/" class="article-date">
@@ -96,7 +146,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://q0821.github.io/blog/2018/03/01/hello-world/" data-id="cje8q9mkz0000rdu6vd3hjbn2" class="article-share-link">Teilen</a>
+      <a data-url="https://q0821.github.io/blog/2018/03/01/hello-world/" data-id="cje8qvip20001i1u6h7douc2v" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -116,9 +166,23 @@
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="tags/WHM-Cloudlinux-LVE/">WHM,Cloudlinux,LVE</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="tags/WHM-Cloudlinux-LVE/" style="font-size: 10px;">WHM,Cloudlinux,LVE</a>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
@@ -135,6 +199,10 @@
     <h3 class="widget-title">letzter Beitrag</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="2018/03/02/lvenotsave/">WHM LVE 管理器設定無法儲存</a>
+          </li>
         
           <li>
             <a href="2018/03/01/hello-world/">Hello World</a>
