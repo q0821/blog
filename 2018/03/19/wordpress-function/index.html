@@ -5,19 +5,19 @@
   
 
   
-  <title>wordpress-function | 硬碟裡的雜七雜八</title>
+  <title>自定義 Wordpress 縮圖尺寸 | 硬碟裡的雜七雜八</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="最近在做客戶的網站，這次採用的CMS是Wordpress，在某些地方是還滿不錯用的。紀錄一下有用到的一些語法。 add_image_size() 參考網址：https://developer.wordpress.org/reference/functions/add_image_size/ 1add_image_size( &apos;縮圖名稱&apos;, 寬度, 高度, 要不要裁切 ); // (cropped)">
+  <meta name="description" content="最近在做客戶的網站，這次採用的CMS是Wordpress，在某些地方是還滿不錯用的。紀錄一下有用到的一些語法。 add_image_size() 參考網址：https://developer.wordpress.org/reference/functions/add_image_size/ 要先在版型的function.php裡面加上1add_theme_support( ‘post-thumbn">
 <meta name="keywords" content="Wordpress,template">
 <meta property="og:type" content="article">
-<meta property="og:title" content="wordpress-function">
+<meta property="og:title" content="自定義 Wordpress 縮圖尺寸">
 <meta property="og:url" content="https://q0821.github.io/blog/2018/03/19/wordpress-function/index.html">
 <meta property="og:site_name" content="硬碟裡的雜七雜八">
-<meta property="og:description" content="最近在做客戶的網站，這次採用的CMS是Wordpress，在某些地方是還滿不錯用的。紀錄一下有用到的一些語法。 add_image_size() 參考網址：https://developer.wordpress.org/reference/functions/add_image_size/ 1add_image_size( &apos;縮圖名稱&apos;, 寬度, 高度, 要不要裁切 ); // (cropped)">
-<meta property="og:updated_time" content="2018-03-19T16:32:29.000Z">
+<meta property="og:description" content="最近在做客戶的網站，這次採用的CMS是Wordpress，在某些地方是還滿不錯用的。紀錄一下有用到的一些語法。 add_image_size() 參考網址：https://developer.wordpress.org/reference/functions/add_image_size/ 要先在版型的function.php裡面加上1add_theme_support( ‘post-thumbn">
+<meta property="og:updated_time" content="2018-03-19T16:36:55.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="wordpress-function">
-<meta name="twitter:description" content="最近在做客戶的網站，這次採用的CMS是Wordpress，在某些地方是還滿不錯用的。紀錄一下有用到的一些語法。 add_image_size() 參考網址：https://developer.wordpress.org/reference/functions/add_image_size/ 1add_image_size( &apos;縮圖名稱&apos;, 寬度, 高度, 要不要裁切 ); // (cropped)">
+<meta name="twitter:title" content="自定義 Wordpress 縮圖尺寸">
+<meta name="twitter:description" content="最近在做客戶的網站，這次採用的CMS是Wordpress，在某些地方是還滿不錯用的。紀錄一下有用到的一些語法。 add_image_size() 參考網址：https://developer.wordpress.org/reference/functions/add_image_size/ 要先在版型的function.php裡面加上1add_theme_support( ‘post-thumbn">
   
     <link rel="alternate" href="../../../../atom.xml" title="硬碟裡的雜七雜八" type="application/atom+xml">
   
@@ -78,7 +78,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      wordpress-function
+      自定義 Wordpress 縮圖尺寸
     </h1>
   
 
@@ -89,6 +89,7 @@
         <p>最近在做客戶的網站，這次採用的CMS是Wordpress，在某些地方是還滿不錯用的。<br>紀錄一下有用到的一些語法。</p>
 <p><strong>add_image_size()</strong></p>
 <p>參考網址：<a href="https://developer.wordpress.org/reference/functions/add_image_size/" target="_blank" rel="noopener">https://developer.wordpress.org/reference/functions/add_image_size/</a></p>
+<p>要先在版型的function.php裡面加上<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">add_theme_support( ‘post-thumbnails’ );</span><br></pre></td></tr></table></figure></p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">add_image_size( <span class="string">'縮圖名稱'</span>, 寬度, 高度, 要不要裁切 ); <span class="comment">// (cropped)</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>寬度：輸入整數數字（單位是像素）</li>
@@ -166,7 +167,7 @@
       <ul>
         
           <li>
-            <a href="">wordpress-function</a>
+            <a href="">自定義 Wordpress 縮圖尺寸</a>
           </li>
         
           <li>

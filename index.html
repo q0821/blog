@@ -75,7 +75,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="2018/03/19/wordpress-function/">wordpress-function</a>
+      <a class="article-title" href="2018/03/19/wordpress-function/">自定義 Wordpress 縮圖尺寸</a>
     </h1>
   
 
@@ -86,6 +86,7 @@
         <p>最近在做客戶的網站，這次採用的CMS是Wordpress，在某些地方是還滿不錯用的。<br>紀錄一下有用到的一些語法。</p>
 <p><strong>add_image_size()</strong></p>
 <p>參考網址：<a href="https://developer.wordpress.org/reference/functions/add_image_size/" target="_blank" rel="noopener">https://developer.wordpress.org/reference/functions/add_image_size/</a></p>
+<p>要先在版型的function.php裡面加上<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">add_theme_support( ‘post-thumbnails’ );</span><br></pre></td></tr></table></figure></p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">add_image_size( <span class="string">'縮圖名稱'</span>, 寬度, 高度, 要不要裁切 ); <span class="comment">// (cropped)</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>寬度：輸入整數數字（單位是像素）</li>
@@ -250,7 +251,7 @@
       <ul>
         
           <li>
-            <a href="2018/03/19/wordpress-function/">wordpress-function</a>
+            <a href="2018/03/19/wordpress-function/">自定義 Wordpress 縮圖尺寸</a>
           </li>
         
           <li>
