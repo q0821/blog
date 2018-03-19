@@ -85,15 +85,15 @@
       
         <p>最近在做客戶的網站，這次採用的CMS是Wordpress，在某些地方是還滿不錯用的。<br>紀錄一下有用到的一些語法。</p>
 <p><strong>add_image_size()</strong></p>
-<p>參考網址：<a href="">https://developer.wordpress.org/reference/functions/add_image_size/</a></p>
-<p>add_image_size( ‘縮圖名稱’, 寬度, 高度, 要不要裁切 ); // (cropped)</p>
+<p>參考網址：<a href="https://developer.wordpress.org/reference/functions/add_image_size/" target="_blank" rel="noopener">https://developer.wordpress.org/reference/functions/add_image_size/</a></p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">add_image_size( <span class="string">'縮圖名稱'</span>, 寬度, 高度, 要不要裁切 ); <span class="comment">// (cropped)</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>寬度：輸入整數數字（單位是像素）</li>
 <li>高度：輸入整數數字（單位是像素）</li>
 <li>要不要裁切：false（預設值） / true，或是輸入array，可以決定從那邊裁切。</li>
 </ul>
 <p>在版型裡面要用的話就可以用下面的方法</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if ( has_post_thumbnail() ) &#123; </span><br><span class="line">    the_post_thumbnail( &apos;your-custom-size&apos; ); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> ( has_post_thumbnail() ) &#123; </span><br><span class="line">    the_post_thumbnail( <span class="string">'your-custom-size'</span> ); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
