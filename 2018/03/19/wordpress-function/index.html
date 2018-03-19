@@ -5,19 +5,19 @@
   
 
   
-  <title>WHM LVE 管理器設定無法儲存 | 硬碟裡的雜七雜八</title>
+  <title>wordpress-function | 硬碟裡的雜七雜八</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="今天客戶的網站因為人數太多導致 Resource Limit Is Reached，想到我們的主機有使用 Cloudlinux，裡面的 Concurrent Connections 設定了一個數值 ，已經滿了，於是在 WHM 後台的 LVE 管理器，要設定這個客戶，提升他的 Concurrent Connections，讓他可以恢復正常連線，但是設定好後，畫面卻一直停留在 Saved settin">
-<meta name="keywords" content="WHM,Cloudlinux,LVE">
+  <meta name="description" content="最近在做客戶的網站，這次採用的CMS是Wordpress，在某些地方是還滿不錯用的。紀錄一下有用到的一些語法。 add_image_size() 參考網址：https://developer.wordpress.org/reference/functions/add_image_size/ add_image_size( ‘縮圖名稱’, 寬度, 高度, 要不要裁切 ); // (cropped)">
+<meta name="keywords" content="Wordpress,template">
 <meta property="og:type" content="article">
-<meta property="og:title" content="WHM LVE 管理器設定無法儲存">
-<meta property="og:url" content="https://q0821.github.io/blog/2018/03/02/lvenotsave/index.html">
+<meta property="og:title" content="wordpress-function">
+<meta property="og:url" content="https://q0821.github.io/blog/2018/03/19/wordpress-function/index.html">
 <meta property="og:site_name" content="硬碟裡的雜七雜八">
-<meta property="og:description" content="今天客戶的網站因為人數太多導致 Resource Limit Is Reached，想到我們的主機有使用 Cloudlinux，裡面的 Concurrent Connections 設定了一個數值 ，已經滿了，於是在 WHM 後台的 LVE 管理器，要設定這個客戶，提升他的 Concurrent Connections，讓他可以恢復正常連線，但是設定好後，畫面卻一直停留在 Saved settin">
-<meta property="og:updated_time" content="2018-03-01T16:51:15.000Z">
+<meta property="og:description" content="最近在做客戶的網站，這次採用的CMS是Wordpress，在某些地方是還滿不錯用的。紀錄一下有用到的一些語法。 add_image_size() 參考網址：https://developer.wordpress.org/reference/functions/add_image_size/ add_image_size( ‘縮圖名稱’, 寬度, 高度, 要不要裁切 ); // (cropped)">
+<meta property="og:updated_time" content="2018-03-19T16:31:05.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="WHM LVE 管理器設定無法儲存">
-<meta name="twitter:description" content="今天客戶的網站因為人數太多導致 Resource Limit Is Reached，想到我們的主機有使用 Cloudlinux，裡面的 Concurrent Connections 設定了一個數值 ，已經滿了，於是在 WHM 後台的 LVE 管理器，要設定這個客戶，提升他的 Concurrent Connections，讓他可以恢復正常連線，但是設定好後，畫面卻一直停留在 Saved settin">
+<meta name="twitter:title" content="wordpress-function">
+<meta name="twitter:description" content="最近在做客戶的網站，這次採用的CMS是Wordpress，在某些地方是還滿不錯用的。紀錄一下有用到的一些語法。 add_image_size() 參考網址：https://developer.wordpress.org/reference/functions/add_image_size/ add_image_size( ‘縮圖名稱’, 寬度, 高度, 要不要裁切 ); // (cropped)">
   
     <link rel="alternate" href="../../../../atom.xml" title="硬碟裡的雜七雜八" type="application/atom+xml">
   
@@ -64,10 +64,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-lvenotsave" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-wordpress-function" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="" class="article-date">
-  <time datetime="2018-03-01T16:35:15.000Z" itemprop="datePublished">2018-03-02</time>
+  <time datetime="2018-03-19T15:51:14.000Z" itemprop="datePublished">2018-03-19</time>
 </a>
     
   </div>
@@ -78,7 +78,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      WHM LVE 管理器設定無法儲存
+      wordpress-function
     </h1>
   
 
@@ -86,26 +86,25 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>今天客戶的網站因為人數太多導致 Resource Limit Is Reached，想到我們的主機有使用 Cloudlinux，裡面的 Concurrent Connections 設定了一個數值 ，已經滿了，於是在 WHM 後台的 LVE 管理器，要設定這個客戶，提升他的 Concurrent Connections，讓他可以恢復正常連線，但是設定好後，畫面卻一直停留在 Saved settings…，沒有辦法順利儲存。<br>後來 Shingo 找了找論壇，看到了這篇<a href="https://forums.cpanel.net/threads/settings-are-not-being-saved-in-the-cloudlinux-lve-manager.519291/" title="Settings are not being saved in the CloudLinux LVE Manager" target="_blank" rel="noopener">Settings are not being saved in the CloudLinux LVE Manager</a>，裡面提到執行以下指令，就可以順利儲存設定了。<br><code>yum install lvemanager</code><br>ssh 登入執行後，在 WHM 的介面裡面的 LVE 管理器就更新了，就可以順利儲存了。</p>
-<p>順帶一提 LVE 管理器的設定值的英文說明</p>
+        <p>最近在做客戶的網站，這次採用的CMS是Wordpress，在某些地方是還滿不錯用的。<br>紀錄一下有用到的一些語法。</p>
+<p><strong>add_image_size()</strong></p>
+<p>參考網址：<a href="">https://developer.wordpress.org/reference/functions/add_image_size/</a></p>
+<p>add_image_size( ‘縮圖名稱’, 寬度, 高度, 要不要裁切 ); // (cropped)</p>
 <ul>
-<li>ID：user name if LVE id matches user id in /etc/passwd, or LVE id</li>
-<li>EP：number of entry processes (concurrent scripts executed)</li>
-<li>PNO：number of processes within LVE</li>
-<li>TNO：number of threads within LVE</li>
-<li>CPU：CPU usage by LVE, relative to total CPU resources of the server</li>
-<li>MEM：Memory usage by LVE, in KB</li>
-<li>I/O：I/O usage</li>
-<li>IOPS：number of read/write operations per second</li>
+<li>寬度：輸入整數數字（單位是像素）</li>
+<li>高度：輸入整數數字（單位是像素）</li>
+<li>要不要裁切：false（預設值） / true，或是輸入array，可以決定從那邊裁切。</li>
 </ul>
+<p>在版型裡面要用的話就可以用下面的方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if ( has_post_thumbnail() ) &#123; </span><br><span class="line">    the_post_thumbnail( &apos;your-custom-size&apos; ); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://q0821.github.io/blog/2018/03/02/lvenotsave/" data-id="cjeyg4c9k0001w7u6b02wngu4" class="article-share-link">Teilen</a>
+      <a data-url="https://q0821.github.io/blog/2018/03/19/wordpress-function/" data-id="cjeyg5vx00000zvu6j8ml6iz5" class="article-share-link">Teilen</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../../tags/Cloudlinux/">Cloudlinux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../../tags/LVE/">LVE</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../../tags/WHM/">WHM</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../../tags/Wordpress/">Wordpress</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../../tags/template/">template</a></li></ul>
 
     </footer>
   </div>
@@ -113,19 +112,10 @@
     
 <nav id="article-nav">
   
-    <a href="../../19/wordpress-function/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Neuer</strong>
-      <div class="article-nav-title">
-        
-          wordpress-function
-        
-      </div>
-    </a>
   
-  
-    <a href="../../01/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="../../02/lvenotsave/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Älter</strong>
-      <div class="article-nav-title">Hello World</div>
+      <div class="article-nav-title">WHM LVE 管理器設定無法儲存</div>
     </a>
   
 </nav>
@@ -176,11 +166,11 @@
       <ul>
         
           <li>
-            <a href="../../19/wordpress-function/">wordpress-function</a>
+            <a href="">wordpress-function</a>
           </li>
         
           <li>
-            <a href="">WHM LVE 管理器設定無法儲存</a>
+            <a href="../../02/lvenotsave/">WHM LVE 管理器設定無法儲存</a>
           </li>
         
           <li>
