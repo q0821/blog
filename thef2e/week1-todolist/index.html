@@ -18,47 +18,41 @@
         </div>
       </div>
     </section>
-    <div class="container mainBody">
+    <div class="container mainBody" id="app">
       <div class="columns">
         <div class="column">
           <div class="field">
             <label class="label">代辦事項</label>
             <div class="control">
-              <input class="input" type="text" placeholder="輸入文字">
+              <input class="input" type="text" placeholder="輸入文字" v-model="newTodo.title">
             </div>
           </div>
           <div class="field">
             <label class="label">死線</label>
             <div class="control">
-              <input class="input" type="date" placeholder="選擇日期">
+              <input class="input" type="date" placeholder="選擇日期" v-model="newTodo.duedate">
             </div>
           </div>
           <div class="field is-grouped">
             <div class="control">
-              <button class="button is-link">新增</button>
+              <button class="button is-link" @click="addTodo">新增</button>
             </div>
           </div>
         </div>
         <div class="column">
           <div class="tabs is-centered is-boxed">
             <ul>
-              <li class="is-active"><a><span class="icon is-small"><i class="fas fa-list-ul"></i></span><span>待辦清單</span></a></li>
-              <li><a><span class="icon is-small"><i class="fas fa-spinner"></i></span><span>進行中</span></a></li>
-              <li><a><span class="icon is-small"><i class="fas fa-check"></i></span><span>已完成</span></a></li>
+              <li :class="{'is-active':visibiltiy === 'all'}" @click="visibiltiy = 'all'"><a><span class="icon is-small"><i class="fas fa-list-ul"></i></span><span>待辦清單</span></a></li>
+              <li :class="{'is-active':visibiltiy === 'processing'}" @click="visibiltiy = 'processing'"><a><span class="icon is-small"><i class="fas fa-spinner"></i></span><span>進行中</span></a></li>
+              <li :class="{'is-active':visibiltiy === 'completed'}" @click="visibiltiy = 'completed'"><a><span class="icon is-small"><i class="fas fa-check"></i></span><span>已完成</span></a></li>
             </ul>
           </div>
           <div class="todolist"> 
-            <div class="todoitem">
-              <input type="checkbox"><span class="is-success"> <span class="date">2018/06/11</span> 事件1</span>
-              <button class="delete is-pulled-right"> </button>
-            </div>
-            <div class="todoitem">
-              <input type="checkbox"><span class="is-success"> <span class="date">2018/06/11</span> 事件2</span>
-              <button class="delete is-pulled-right"> </button>
-            </div>
-            <div class="todoitem">
-              <input type="checkbox"><span class="is-success"> <span class="date">2018/06/11</span> 事件3</span>
-              <button class="delete is-pulled-right"></button>
+            <div class="todoitem" v-for="(item,key) in filteredTodos">
+              <input type="checkbox" :id="item.id" v-model="item.completed">
+              <label :for="item.id" :class="{ 'completed': item.completed }"><span class="is-success"> <span class="date">{{item.duedate}}</span> {{item.title}}</span></label>
+              <button class="delete is-pulled-right" @click="removeTodo(key)"></button>
+              <button class="is-pulled-right" @click="editTodo(item)">Edit</button>
             </div>
           </div>
         </div>

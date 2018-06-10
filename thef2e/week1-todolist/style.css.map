@@ -1,1 +1,1 @@
-{"version":3,"sources":["style.scss"],"names":[],"mappings":"AAAA;EACE,kBAAgB,EACjB","file":"style.css","sourcesContent":[".mainBody{\n  padding-top:3rem;\n}"]}
+{"version":3,"sources":["style.scss"],"names":[],"mappings":"AAAA;EACE,kBAAgB,EACjB;;AAED;EACE,8BAA4B,EAC7B","file":"style.css","sourcesContent":[".mainBody{\n  padding-top:3rem;\n}\n\n.completed{\n  text-decoration:line-through;\n}"]}
