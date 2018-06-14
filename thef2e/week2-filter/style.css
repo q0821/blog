@@ -1,0 +1,17 @@
+.sidebar {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 300px;
+          flex: 0 0 300px; }
+
+.pagination {
+  margin-top: 1.5rem; }
+
+.result-item {
+  padding: 0; }
+  .result-item .media-content {
+    padding: 1.25rem; }
+  .result-item:hover {
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.8); }
+
+/*# sourceMappingURL=style.css.map */
