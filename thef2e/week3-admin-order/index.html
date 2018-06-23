@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>F2E-Week3 Admin Order</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+  </head>
+  <body>
+    <nav class="navbar has-background-black" role="navigation" aria-label="main navigation">
+      <div class="container">
+        <div class="navbar-brand">
+          <h1 class="title is-1">Shoptime</h1><a class="navbar-burger" role="button" aria-label="menu" aria-expanded="false"><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></a>
+        </div>
+        <div class="navbar-menu">
+          <div class="navbar-start"><a class="navbar-item">HOME</a><a class="navbar-item">ORDERS</a><a class="navbar-item">PRODUCT</a></div>
+          <div class="navbar-end"><a class="navbar-item">ADMIN</a></div>
+        </div>
+      </div>
+    </nav>
+    <section class="section">
+      <div class="container">
+        <div class="level">
+          <div class="level-left">
+            <h2 class="title">Overview</h2>
+          </div>
+          <div class="level-right">
+            <div class="field is-grouped">
+              <p class="control has-icons-left">
+                <input class="input" type="date" placeholder="Start Date"><span class="icon is-small is-left"><i class="fas fa-calendar"></i></span>
+              </p>
+              <p class="control"><i class="fas fa-caret-right fa-2x"></i></p>
+              <p class="control has-icons-left">
+                <input class="input" type="date" placeholder="End Date"><span class="icon is-small is-left"><i class="fas fa-calendar"></i></span>
+              </p>
+              <div class="field-body">
+                <div class="control">
+                  <div class="select">
+                    <select>
+                      <option>Daily</option>
+                      <option>Weekly</option>
+                      <option>Monthly</option>
+                      <option>Yearly</option>
+                      <option>Custom</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column has-text-centered">
+            <div class="card shopStatus totalRevenue">
+              <p class="heading"> <i class="fas fa-hand-holding-usd"></i>TOTAL REVENUE</p>
+              <p class="data">54,540</p>
+            </div>
+          </div>
+          <div class="column has-text-centered">
+            <div class="card shopStatus totalCost">
+              <p class="heading"> <i class="fas fa-boxes"></i>TOTAL COST</p>
+              <p class="data">12,660</p>
+            </div>
+          </div>
+          <div class="column has-text-centered">
+            <div class="card shopStatus netIncome">
+              <p class="heading"> <i class="fas fa-money-check-alt"></i>NET INCOME</p>
+              <p class="data">41,880</p>
+            </div>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column">
+            <div class="card">
+              <div class="title">Activity</div>
+              <div class="chart">
+                <canvas id="myChart"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column">
+            <div class="card">
+              <div class="title">Transaction Website</div>
+              <table class="table is-striped is-hoverable is-fullwidth">
+                <tr class="siteItem">
+                  <td class="siteIcon"><i class="fab fa-facebook-square fa-4x"></i></td>
+                  <td class="siteName">Facebook.com</td>
+                  <td class="siteCount">45,836</td>
+                  <td class="siteRate add">20%</td>
+                </tr>
+                <tr class="siteItem">
+                  <td class="siteIcon"><i class="fab fa-google fa-4x"></i></td>
+                  <td class="siteName">google.com</td>
+                  <td class="siteCount">23,582</td>
+                  <td class="siteRate add">12%</td>
+                </tr>
+                <tr class="siteItem">
+                  <td class="siteIcon"><img src="https://d29fhpw069ctt2.cloudfront.net/icon/image/38692/preview.svg"></td>
+                  <td class="siteName">Shopify.com</td>
+                  <td class="siteCount">2,489</td>
+                  <td class="siteRate minus">15%</td>
+                </tr>
+                <tr class="siteItem">
+                  <td class="siteIcon"><i class="fab fa-wordpress fa-4x"></i></td>
+                  <td class="siteName">wordpress.com</td>
+                  <td class="siteCount">1,057</td>
+                  <td class="siteRate minus">30%</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <div class="title">Latest Orders</div>
+              <div class="media lstestOrderItem">
+                <div class="media-left">
+                  <figure class="image is-100x100"><img src="http://placekitten.com/100/100"></figure>
+                </div>
+                <div class="media-content">
+                  <div class="name">Vintage T-shirt</div>
+                  <div class="dateTime"><i class="fas fa-clock"></i> 2018/6/13  13:42</div>
+                  <div class="cat"><i class="fas fa-male"></i> Belle Willis</div>
+                  <div class="total"><span class="label">Total</span>3,200</div>
+                </div>
+              </div>
+              <div class="media lstestOrderItem">
+                <div class="media-left">
+                  <figure class="image is-100x100"><img src="http://placekitten.com/100/100"></figure>
+                </div>
+                <div class="media-content">
+                  <div class="name">Vintage T-shirt</div>
+                  <div class="dateTime"><i class="fas fa-clock"></i> 2018/6/13  13:42</div>
+                  <div class="cat"><i class="fas fa-male"></i> Belle Willis</div>
+                  <div class="total"><span class="label">Total</span>3,200</div>
+                </div>
+              </div>
+              <div class="media lstestOrderItem">
+                <div class="media-left">
+                  <figure class="image is-100x100"><img src="http://placekitten.com/100/100"></figure>
+                </div>
+                <div class="media-content">
+                  <div class="name">Vintage T-shirt</div>
+                  <div class="dateTime"><i class="fas fa-clock"></i> 2018/6/13  13:42</div>
+                  <div class="cat"><i class="fas fa-male"></i> Belle Willis</div>
+                  <div class="total"><span class="label">Total</span>3,200</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container is-fluid">
+        <div class="content has-text-centered">
+          <p>HD@20180623</p>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <script defer="" src="./js/app.min.js"></script>
+  </body>
+</html>
