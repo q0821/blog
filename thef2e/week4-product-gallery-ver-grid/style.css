@@ -1,0 +1,282 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,900,900i");
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  line-height: 1;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+body, html {
+  font-family: 'Roboto',"Helvetica", "Arial","LiHei Pro","黑體-繁","微軟正黑體", sans-serif;
+  font-weight: 900;
+  font-size: 10px; }
+
+img {
+  max-width: 100%; }
+
+.subtitle {
+  text-align: center;
+  background: #000;
+  color: #fff;
+  font-size: 2rem;
+  line-height: 24px;
+  width: 131px;
+  height: 27px;
+  margin: 0 auto; }
+
+.title {
+  text-align: center;
+  font-size: 7.2rem;
+  line-height: 85px; }
+
+.pic img {
+  vertical-align: middle; }
+
+.wrap {
+  display: grid;
+  margin: 0 auto;
+  max-width: 960px;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(20, 100px); }
+
+.item {
+  position: relative; }
+  .item:before, .item:after {
+    content: '';
+    position: absolute;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    z-index: -20; }
+
+.b20, .item1:after, .item2:after, .item3:after, .item4:after, .item5:after, .item6:after, .item7:after {
+  border: 20px solid #50E3C2; }
+
+.stripes, .item1:before, .item4:before, .item5:before {
+  width: 240px;
+  height: 100px;
+  background: repeating-linear-gradient(315deg, #50E3C2, #50E3C2 20px, transparent 20px, transparent 34px);
+  background-position-x: 25px;
+  z-index: 10; }
+
+.item-content {
+  position: relative; }
+  .item-content .itemTitle {
+    font-size: 4.8rem;
+    position: absolute;
+    z-index: 30; }
+    .item-content .itemTitle:before, .item-content .itemTitle:after {
+      content: attr(data-title);
+      position: absolute;
+      left: 0;
+      overflow: hidden; }
+    .item-content .itemTitle:before {
+      top: -16px;
+      opacity: .3;
+      z-index: 20;
+      height: 21px; }
+    .item-content .itemTitle:after {
+      top: -26px;
+      opacity: .1;
+      z-index: 10;
+      height: 14px; }
+  .item-content .desc {
+    font-size: 2.4rem;
+    position: absolute;
+    font-style: italic;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content; }
+  .item-content .number {
+    font-size: 4.8rem;
+    position: absolute; }
+
+.item0 {
+  grid-area: 1 / 1 / 1 / -1; }
+
+.item1 {
+  grid-area: 3 / 1 / span 4 / span 4; }
+  .item1 .itemTitle {
+    top: -15px; }
+  .item1 .number {
+    bottom: -1em; }
+  .item1 .desc {
+    left: 100%;
+    top: 75%;
+    -webkit-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg); }
+  .item1:before {
+    bottom: -12.5%;
+    left: 12.5%;
+    width: 50%;
+    height: 25%; }
+  .item1:after {
+    width: 50%;
+    height: 50%;
+    right: -12.5%;
+    top: -12.5%; }
+
+.item2 {
+  grid-area: 4 / 6 / span 2 / span 2; }
+  .item2 .itemTitle {
+    top: calc(100% + 26px);
+    left: 50%; }
+  .item2 .number {
+    right: -50%;
+    top: -50%; }
+  .item2 .desc {
+    right: 50%;
+    top: -1em; }
+  .item2:before {
+    z-index: -10;
+    left: 25%;
+    top: -25%;
+    width: 100%;
+    height: 100%;
+    background: #50E3C2; }
+  .item2:after {
+    z-index: -20;
+    left: 50%;
+    top: -50%;
+    width: 100%;
+    height: 100%; }
+
+.item3 {
+  grid-area: 9 / 1 / span 2 / span 4; }
+  .item3 .itemTitle {
+    bottom: 100%;
+    right: 0; }
+  .item3 .number {
+    left: 100%;
+    top: 100%; }
+  .item3 .desc {
+    right: 50%;
+    top: 100%; }
+  .item3:before {
+    z-index: -10;
+    left: 0%;
+    top: -25%;
+    width: 50%;
+    height: 25%;
+    background: #50E3C2; }
+  .item3:after {
+    z-index: -20;
+    left: 62.5%;
+    top: 25%;
+    width: 50%;
+    height: 100%; }
+
+.item4 {
+  grid-area: 9 / 7 / span 4 / span 2; }
+  .item4 .itemTitle {
+    bottom: 100%;
+    right: 100%;
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg); }
+  .item4 .number {
+    bottom: 0;
+    right: 100%; }
+  .item4 .desc {
+    right: 25%;
+    bottom: 100%;
+    -webkit-transform-origin: 100% 50%;
+            transform-origin: 100% 50%;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg); }
+  .item4:before {
+    bottom: -12.5%;
+    left: 0%;
+    width: 100%;
+    height: 25%; }
+  .item4:after {
+    width: 100%;
+    height: 50%;
+    right: 25%;
+    top: -25%; }
+
+.item5 {
+  grid-area: 13 / 3 / span 2 / span 2; }
+  .item5 .itemTitle {
+    bottom: 50%;
+    left: -100%; }
+  .item5 .number {
+    bottom: 0;
+    left: -50%; }
+  .item5 .desc {
+    left: 100%;
+    top: 0%; }
+  .item5:before {
+    bottom: 75%;
+    right: 75%;
+    width: 100%;
+    height: 50%; }
+  .item5:after {
+    width: 100%;
+    height: 50%;
+    right: 50%;
+    top: 75%; }
+
+.item6 {
+  grid-area: 15 / 5 / span 4 / span 4; }
+  .item6 .itemTitle {
+    right: 0%;
+    bottom: 100%; }
+  .item6 .number {
+    bottom: 50%;
+    right: 100%; }
+  .item6 .desc {
+    left: 0%;
+    top: 100%;
+    text-align: center;
+    width: 100%; }
+  .item6:before {
+    background: #50E3C2;
+    bottom: 0%;
+    left: -12.5%;
+    width: 12.5%;
+    height: 50%; }
+  .item6:after {
+    width: 100%;
+    height: 25%;
+    left: 0%;
+    top: 87.5%; }
+
+.item7 {
+  grid-area: 17 / 1 / span 4 / span 2; }
+  .item7 .itemTitle {
+    left: 100%;
+    bottom: 100%;
+    -webkit-transform-origin: 0% 100%;
+            transform-origin: 0% 100%;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg); }
+  .item7 .number {
+    bottom: 0%;
+    right: -50%; }
+  .item7 .desc {
+    left: 0%;
+    bottom: 100%; }
+  .item7:before {
+    background: #50E3C2;
+    bottom: 0%;
+    right: -50%;
+    width: 50%;
+    height: 50%; }
+  .item7:after {
+    width: 100%;
+    height: 75%;
+    left: 25%;
+    top: -12.5%; }
+
+.footer {
+  text-align: center;
+  background: #f1f1f1;
+  padding: 15px;
+  margin-top: 30px; }
+
+/*# sourceMappingURL=style.css.map */
