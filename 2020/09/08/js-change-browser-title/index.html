@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
     <title>
         
-        20190510 WordPress Hi Ninja!｜硬碟裡的雜七雜八
+        當網頁不在前景時，變更網頁標題｜硬碟裡的雜七雜八
         
     </title>
 
-    <link rel="canonical" href="https://q0821.github.io/blog/blog/2019/05/10/20190510-wordpress/">
+    <link rel="canonical" href="https://q0821.github.io/blog/blog/2020/09/08/js-change-browser-title/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/blog/css/bootstrap.min.css">
@@ -137,21 +137,18 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>20190510 WordPress Hi Ninja!</h1>
+                    <h1>當網頁不在前景時，變更網頁標題</h1>
                     
                     <span class="meta">
                          作者 Jackie Yeh
                         <span>
-                          日期 2019-05-10
+                          日期 2020-09-08
                          </span>
                     </span>
                     <div class="tags text-center">
                         
-                        <a class="tag" href="/blog/tags/#WordPress"
-                           title="WordPress">WordPress</a>
-                        
-                        <a class="tag" href="/blog/tags/#資安"
-                           title="資安">資安</a>
+                        <a class="tag" href="/blog/tags/#js"
+                           title="js">js</a>
                         
                     </div>
                 </div>
@@ -160,7 +157,7 @@
     </div>
     <div class="post-title-haojen">
         <span>
-            20190510 WordPress Hi Ninja!
+            當網頁不在前景時，變更網頁標題
         </span>
     </div>
 </header>
@@ -171,42 +168,23 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <p>今天是 Tonny 大大，來教大家資安，<br>資安是標準配備，就像車子的煞車一樣，這句話說的非常好阿！<br>另外就是從事資安這個行業道德一定要夠。</p>
-<p>Health Check &amp; Troubleshooting<br><a href="https://tw.wordpress.org/plugins/health-check/" target="_blank" rel="noopener">https://tw.wordpress.org/plugins/health-check/</a><br>官方出的，建議安裝，可以檢查核心檔案有沒有被修改過，可是今天晚上測試他一直說有幾個有變動過，打開來卻是一片空白。</p>
-<p>Security Ninja，<br>會寫出你該要修正的問題，免費版本會寫解法，再自己去手動處理，pro 版本可以自動修正，<br>這個免費版本的解法就寫的蠻詳細的了，而且還蠻多都是要你去改function.php，可以自己寫一次，之後就複製貼上就好。<br>看了一下一些簡單的東西，如下，其他來不及看，就自己裝起來掃描一次看內容拉。</p>
-<ol>
-<li>啟用兩階段認證</li>
-<li>資料表前綴不要用 wp_</li>
-<li>移除 /wp-admin/install.php</li>
-<li>移除 /wp-admin/upgrade.php</li>
-<li>define(‘DISALLOW_FILE_EDIT’, true);</li>
-</ol>
-<p>NinjaScanner<br>看起來好像也是掃描檔案有沒有變動過，看介紹還有資料庫的快照，總之就是讓你看你的WordPress 有沒有被入侵植入奇怪的程式。</p>
-<p>Content Security Policy Pro<br>阻止跨站攻擊的防護，但是這些是什麼我不太懂，下面找了兩篇很久之前的文章參考，不過還沒看。<br><a href="https://devco.re/blog/2014/03/10/security-issues-of-http-headers-1/" target="_blank" rel="noopener">https://devco.re/blog/2014/03/10/security-issues-of-http-headers-1/</a><br><a href="https://devco.re/blog/2014/04/08/security-issues-of-http-headers-2-content-security-policy/" target="_blank" rel="noopener">https://devco.re/blog/2014/04/08/security-issues-of-http-headers-2-content-security-policy/</a></p>
-<p>Feature Policy<br>google 出的，看起來像是一些功能權限的政策。</p>
-<p>一些小聚提到的網址<br>Critical zero-day vulnerability fixed in WordPress Easy WP SMTP plugin.<br><a href="https://blog.nintechnet.com/critical-0day-vulnerability-fixed-in-wordpress-easy-wp-smtp-plugin/" target="_blank" rel="noopener">https://blog.nintechnet.com/critical-0day-vulnerability-fixed-in-wordpress-easy-wp-smtp-plugin/</a></p>
-<p>駭客開採WordPress外掛程式漏洞以進行技術支援詐騙<br><a href="https://www.ithome.com.tw/news/129525" target="_blank" rel="noopener">https://www.ithome.com.tw/news/129525</a></p>
-<p>Analyse your HTTP response headers<br><a href="https://securityheaders.com/" target="_blank" rel="noopener">https://securityheaders.com/</a></p>
-<p>HGET.IO – Analyse your HTTP response headers<br><a href="https://hget.io/" target="_blank" rel="noopener">https://hget.io/</a></p>
-<p>hackertarget.com 檢查弱點<br><a href="https://hackertarget.com/" target="_blank" rel="noopener">https://hackertarget.com/</a></p>
-<p>可以用下面的關鍵字去google，就可以找到最近WordPress 有沒有什麼弱點，或是套件有問題，如果自己有用到的話就要去想辦法補起來。<br>WordPress exploit<br>Joomla exploit</p>
-<p><a href="https://www.exploit-db.com/google-hacking-database" target="_blank" rel="noopener">https://www.exploit-db.com/google-hacking-database</a><br>這個超不妙阿….<br>搜尋一下 wordpress<br>出來的字串丟 google ，就會找到有這個弱點的網站<br>隨便找了一個字串丟了之後，還真的有看到DB的帳號密碼，而且是 .com.tw 的網站，這時候要怎麼辦？<br>還記得最上面說的要有道德嗎？所以我默默的關掉了。</p>
-<p>大致上就是這樣的拉。</p>
+                <p>感謝 Geber Lisa 分享，<br><a href="https://www.brandingmag.com/2015/10/14/what-is-branding-and-why-is-it-important-for-your-business/" target="_blank" rel="noopener">https://www.brandingmag.com/2015/10/14/what-is-branding-and-why-is-it-important-for-your-business/</a><br>這個網頁切換分頁的時候，<br>他的網頁標題會變成Keep reading，<br>找了一下，原來是一小段小語法，<br>透過 visibilitychange 事件的監聽，<br>document.hidden 是判斷頁面是否隱藏，<br>觸發要不要切換網頁標題，<br>挖出來的語法如下</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    window.onload = function() &#123;</span><br><span class="line">        var pageTitle = document.title;</span><br><span class="line">        var attentionMessage = &apos;Keep reading 👀&apos;;</span><br><span class="line">        document.addEventListener(&apos;visibilitychange&apos;, function(e) &#123;</span><br><span class="line">            var isPageActive = !document.hidden;</span><br><span class="line">            if(!isPageActive)&#123;</span><br><span class="line">                document.title = attentionMessage;</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                document.title = pageTitle;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>參考資料：</p>
+<ul>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document/visibilitychange_event" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/API/Document/visibilitychange_event</a></li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document/hidden" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/API/Document/hidden</a></li>
+</ul>
 
                 <hr>
                 
 
                 <ul class="pager">
                     
-                    <li class="previous">
-                        <a href="/blog/2019/07/05/wordpress-phpmyadmn-change-domain/" data-toggle="tooltip" data-placement="top"
-                           title="WordPress 使用 phpMyAdmin 轉換網域">&larr; Previous Post</a>
-                    </li>
-                    
                     
                     <li class="next">
-                        <a href="/blog/2018/12/04/Woocommerce-使用-Coupon-免運費/" data-toggle="tooltip" data-placement="top"
-                           title="Woocommerce 使用 Coupon 免運費">Next Post &rarr;</a>
+                        <a href="/blog/2019/07/05/wordpress-phpmyadmn-change-domain/" data-toggle="tooltip" data-placement="top"
+                           title="WordPress 使用 phpMyAdmin 轉換網域">Next Post &rarr;</a>
                     </li>
                     
                 </ul>
@@ -250,11 +228,8 @@
                     </h5>
                     <div class="tags">
                         
-                        <a class="tag" href="/blog/tags/#WordPress"
-                           title="WordPress">WordPress</a>
-                        
-                        <a class="tag" href="/blog/tags/#資安"
-                           title="資安">資安</a>
+                        <a class="tag" href="/blog/tags/#js"
+                           title="js">js</a>
                         
                     </div>
                 </section>
@@ -276,8 +251,8 @@
 
 
 var disqus_shortname = "jackieyeh";
-var PAGE_IDENTIFIER = "https://q0821.github.io/blog/2019/05/10/20190510-wordpress/";
-var PAGE_URL = "https://q0821.github.io/blog/2019/05/10/20190510-wordpress/";
+var PAGE_IDENTIFIER = "https://q0821.github.io/blog/2020/09/08/js-change-browser-title/";
+var PAGE_URL = "https://q0821.github.io/blog/2020/09/08/js-change-browser-title/";
 
 var disqus_config = function () {
 this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
