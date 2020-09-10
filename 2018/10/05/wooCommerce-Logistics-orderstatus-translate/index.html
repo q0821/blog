@@ -25,14 +25,20 @@
     <link rel="canonical" href="https://q0821.github.io/blog/blog/2018/10/05/wooCommerce-Logistics-orderstatus-translate/">
 
     <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="/blog/css/bootstrap.min.css">
+    
+<link rel="stylesheet" href="/blog/css/bootstrap.min.css">
+
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/blog/css/blog-style.css">
+    
+<link rel="stylesheet" href="/blog/css/blog-style.css">
+
 
     <!-- Pygments Github CSS -->
-    <link rel="stylesheet" href="/blog/css/syntax.css">
-</head>
+    
+<link rel="stylesheet" href="/blog/css/syntax.css">
+
+<meta name="generator" content="Hexo 5.1.1"></head>
 
 <style>
 
@@ -176,11 +182,12 @@
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
                 <p>今天安裝了綠界的超商取貨官方提供給 WooCommerce 的外掛，<br>B2C 會有些狀況無法順利完成，<br>後來改 C2C 可以順利建立物流單，<br>但是發現訂單狀態會顯示 ECPay Shipping，<br>是能理解出貨中拉，<br>但是還是希望能讓消費者跟網站管理人員清楚的知道什麼是ECPay Shipping，<br>本來想直接改 code ，但是這樣一更新就又要在改一次，<br>後來看了看，應該可以使用在 theme 裡面的function.php 使用 add_filter 來覆寫<br>備忘一下</p>
 <p>在 /wp-content/themes/使用的主題/functions.php 裡面加上下面這段</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="comment">//	修改綠界超商取貨出貨狀態 從 ECPay Shipping 變成 出貨中</span></span><br><span class="line">	<span class="comment">//	修改綠界超商取貨出貨狀態 從 ECPay Shipping 變成 出貨中</span></span><br><span class="line">	add_filter(<span class="string">'wc_order_statuses'</span>, ergomap_statuses);</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">function</span> <span class="title">ergomap_statuses</span><span class="params">($order_statuses)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		$order_statuses[<span class="string">'wc-ecpay'</span>] = _x( <span class="string">'出貨中'</span>, <span class="string">'Order status'</span>, <span class="string">'woocommerce'</span> );</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">return</span> $order_statuses;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	add_action(<span class="string">'init'</span>, ergomap_register_status);</span><br><span class="line">	<span class="function"><span class="keyword">function</span> <span class="title">ergomap_register_status</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		register_post_status(</span><br><span class="line">			<span class="string">'wc-ecpay'</span>,</span><br><span class="line">			<span class="keyword">array</span>(</span><br><span class="line">				<span class="string">'label'</span>                     =&gt; _x( <span class="string">'ECPay Shipping'</span>, <span class="string">'Order status'</span>, <span class="string">'woocommerce'</span> ),</span><br><span class="line">				<span class="string">'public'</span>                    =&gt; <span class="keyword">true</span>,</span><br><span class="line">				<span class="string">'exclude_from_search'</span>       =&gt; <span class="keyword">false</span>,</span><br><span class="line">				<span class="string">'show_in_admin_all_list'</span>    =&gt; <span class="keyword">true</span>,</span><br><span class="line">				<span class="string">'show_in_admin_status_list'</span> =&gt; <span class="keyword">true</span>,</span><br><span class="line">				<span class="string">'label_count'</span>               =&gt; _n_noop( _x( <span class="string">'綠界超商取貨 - 已建立物流單'</span>, <span class="string">'Order status'</span>, <span class="string">'woocommerce'</span> ) . <span class="string">' &lt;span class="count"&gt;(%s)&lt;/span&gt;'</span>, _x( <span class="string">'綠界超商取貨 - 已建立物流單'</span>, <span class="string">'Order status'</span>, <span class="string">'woocommerce'</span> ) . <span class="string">' &lt;span class="count"&gt;(%s)&lt;/span&gt;'</span> )</span><br><span class="line">			)</span><br><span class="line">		);</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="comment">//	修改綠界超商取貨出貨狀態 從 ECPay Shipping 變成 出貨中</span></span><br><span class="line">	<span class="comment">//	修改綠界超商取貨出貨狀態 從 ECPay Shipping 變成 出貨中</span></span><br><span class="line">	add_filter(<span class="string">&#x27;wc_order_statuses&#x27;</span>, ergomap_statuses);</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">function</span> <span class="title">ergomap_statuses</span>(<span class="params">$order_statuses</span>)</span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		$order_statuses[<span class="string">&#x27;wc-ecpay&#x27;</span>] = _x( <span class="string">&#x27;出貨中&#x27;</span>, <span class="string">&#x27;Order status&#x27;</span>, <span class="string">&#x27;woocommerce&#x27;</span> );</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">return</span> $order_statuses;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	add_action(<span class="string">&#x27;init&#x27;</span>, ergomap_register_status);</span><br><span class="line">	<span class="function"><span class="keyword">function</span> <span class="title">ergomap_register_status</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		register_post_status(</span><br><span class="line">			<span class="string">&#x27;wc-ecpay&#x27;</span>,</span><br><span class="line">			<span class="keyword">array</span>(</span><br><span class="line">				<span class="string">&#x27;label&#x27;</span>                     =&gt; _x( <span class="string">&#x27;ECPay Shipping&#x27;</span>, <span class="string">&#x27;Order status&#x27;</span>, <span class="string">&#x27;woocommerce&#x27;</span> ),</span><br><span class="line">				<span class="string">&#x27;public&#x27;</span>                    =&gt; <span class="literal">true</span>,</span><br><span class="line">				<span class="string">&#x27;exclude_from_search&#x27;</span>       =&gt; <span class="literal">false</span>,</span><br><span class="line">				<span class="string">&#x27;show_in_admin_all_list&#x27;</span>    =&gt; <span class="literal">true</span>,</span><br><span class="line">				<span class="string">&#x27;show_in_admin_status_list&#x27;</span> =&gt; <span class="literal">true</span>,</span><br><span class="line">				<span class="string">&#x27;label_count&#x27;</span>               =&gt; _n_noop( _x( <span class="string">&#x27;綠界超商取貨 - 已建立物流單&#x27;</span>, <span class="string">&#x27;Order status&#x27;</span>, <span class="string">&#x27;woocommerce&#x27;</span> ) . <span class="string">&#x27; &lt;span class=&quot;count&quot;&gt;(%s)&lt;/span&gt;&#x27;</span>, _x( <span class="string">&#x27;綠界超商取貨 - 已建立物流單&#x27;</span>, <span class="string">&#x27;Order status&#x27;</span>, <span class="string">&#x27;woocommerce&#x27;</span> ) . <span class="string">&#x27; &lt;span class=&quot;count&quot;&gt;(%s)&lt;/span&gt;&#x27;</span> )</span><br><span class="line">			)</span><br><span class="line">		);</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
 <p>參考網址</p>
 <ul>
-<li><a href="https://developer.wordpress.org/reference/functions/add_filter/" target="_blank" rel="noopener">WordPress 說明</a></li>
-<li><a href="https://richer.tw/ry-woocommerce-tools/" target="_blank" rel="noopener">另外的綠界金物流外掛，據說不錯用</a></li>
+<li><a target="_blank" rel="noopener" href="https://developer.wordpress.org/reference/functions/add_filter/">WordPress 說明</a></li>
+<li><a target="_blank" rel="noopener" href="https://richer.tw/ry-woocommerce-tools/">另外的綠界金物流外掛，據說不錯用</a></li>
 </ul>
 
                 <hr>
@@ -336,7 +343,7 @@ s.setAttribute('data-timestamp', +new Date());
                     <br>
                     <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
                     <br>
-                    Theme by <a href="https://haojen.github.io/">Haojen Ma</a>
+                    Theme by <a target="_blank" rel="noopener" href="https://haojen.github.io/">Haojen Ma</a>
                 </p>
 
             </div>
@@ -345,13 +352,19 @@ s.setAttribute('data-timestamp', +new Date());
 </footer>
 
 <!-- jQuery -->
+
 <script src="/blog/js/jquery.min.js"></script>
 
+
 <!-- Bootstrap Core JavaScript -->
+
 <script src="/blog/js/bootstrap.min.js"></script>
 
+
 <!-- Custom Theme JavaScript -->
+
 <script src="/blog/js/blog.js"></script>
+
 
 <!-- async load function -->
 <script>

@@ -25,14 +25,20 @@
     <link rel="canonical" href="https://q0821.github.io/blog/blog/2020/09/08/js-change-browser-title/">
 
     <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="/blog/css/bootstrap.min.css">
+    
+<link rel="stylesheet" href="/blog/css/bootstrap.min.css">
+
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/blog/css/blog-style.css">
+    
+<link rel="stylesheet" href="/blog/css/blog-style.css">
+
 
     <!-- Pygments Github CSS -->
-    <link rel="stylesheet" href="/blog/css/syntax.css">
-</head>
+    
+<link rel="stylesheet" href="/blog/css/syntax.css">
+
+<meta name="generator" content="Hexo 5.1.1"></head>
 
 <style>
 
@@ -168,18 +174,25 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <p>感謝 Geber Lisa 分享，<br><a href="https://www.brandingmag.com/2015/10/14/what-is-branding-and-why-is-it-important-for-your-business/" target="_blank" rel="noopener">https://www.brandingmag.com/2015/10/14/what-is-branding-and-why-is-it-important-for-your-business/</a><br>這個網頁切換分頁的時候，<br>他的網頁標題會變成Keep reading，<br>找了一下，原來是一小段小語法，<br>透過 visibilitychange 事件的監聽，<br>document.hidden 是判斷頁面是否隱藏，<br>觸發要不要切換網頁標題，<br>挖出來的語法如下</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    window.onload = function() &#123;</span><br><span class="line">        var pageTitle = document.title;</span><br><span class="line">        var attentionMessage = &apos;Keep reading 👀&apos;;</span><br><span class="line">        document.addEventListener(&apos;visibilitychange&apos;, function(e) &#123;</span><br><span class="line">            var isPageActive = !document.hidden;</span><br><span class="line">            if(!isPageActive)&#123;</span><br><span class="line">                document.title = attentionMessage;</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                document.title = pageTitle;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+                <p>感謝 Geber Lisa 分享，<br><a target="_blank" rel="noopener" href="https://www.brandingmag.com/2015/10/14/what-is-branding-and-why-is-it-important-for-your-business/">https://www.brandingmag.com/2015/10/14/what-is-branding-and-why-is-it-important-for-your-business/</a><br>這個網頁切換分頁的時候，<br>他的網頁標題會變成Keep reading，<br>找了一下，原來是一小段小語法，<br>透過 visibilitychange 事件的監聽，<br>document.hidden 是判斷頁面是否隱藏，<br>觸發要不要切換網頁標題，<br>挖出來的語法如下</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    window.onload &#x3D; function() &#123;</span><br><span class="line">        var pageTitle &#x3D; document.title;</span><br><span class="line">        var attentionMessage &#x3D; &#39;Keep reading 👀&#39;;</span><br><span class="line">        document.addEventListener(&#39;visibilitychange&#39;, function(e) &#123;</span><br><span class="line">            var isPageActive &#x3D; !document.hidden;</span><br><span class="line">            if(!isPageActive)&#123;</span><br><span class="line">                document.title &#x3D; attentionMessage;</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                document.title &#x3D; pageTitle;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+
 <p>參考資料：</p>
 <ul>
-<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document/visibilitychange_event" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/API/Document/visibilitychange_event</a></li>
-<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document/hidden" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/API/Document/hidden</a></li>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document/visibilitychange_event">https://developer.mozilla.org/zh-CN/docs/Web/API/Document/visibilitychange_event</a></li>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document/hidden">https://developer.mozilla.org/zh-CN/docs/Web/API/Document/hidden</a></li>
 </ul>
 
                 <hr>
                 
 
                 <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/blog/2020/09/10/joomla-add-module-in-component/" data-toggle="tooltip" data-placement="top"
+                           title="Joomla! 在元件的 template 中插入模組">&larr; Previous Post</a>
+                    </li>
                     
                     
                     <li class="next">
@@ -318,7 +331,7 @@ s.setAttribute('data-timestamp', +new Date());
                     <br>
                     <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
                     <br>
-                    Theme by <a href="https://haojen.github.io/">Haojen Ma</a>
+                    Theme by <a target="_blank" rel="noopener" href="https://haojen.github.io/">Haojen Ma</a>
                 </p>
 
             </div>
@@ -327,13 +340,19 @@ s.setAttribute('data-timestamp', +new Date());
 </footer>
 
 <!-- jQuery -->
+
 <script src="/blog/js/jquery.min.js"></script>
 
+
 <!-- Bootstrap Core JavaScript -->
+
 <script src="/blog/js/bootstrap.min.js"></script>
 
+
 <!-- Custom Theme JavaScript -->
+
 <script src="/blog/js/blog.js"></script>
+
 
 <!-- async load function -->
 <script>

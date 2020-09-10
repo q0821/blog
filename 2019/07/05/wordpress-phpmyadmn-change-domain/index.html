@@ -25,14 +25,20 @@
     <link rel="canonical" href="https://q0821.github.io/blog/blog/2019/07/05/wordpress-phpmyadmn-change-domain/">
 
     <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="/blog/css/bootstrap.min.css">
+    
+<link rel="stylesheet" href="/blog/css/bootstrap.min.css">
+
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/blog/css/blog-style.css">
+    
+<link rel="stylesheet" href="/blog/css/blog-style.css">
+
 
     <!-- Pygments Github CSS -->
-    <link rel="stylesheet" href="/blog/css/syntax.css">
-</head>
+    
+<link rel="stylesheet" href="/blog/css/syntax.css">
+
+<meta name="generator" content="Hexo 5.1.1"></head>
 
 <style>
 
@@ -172,8 +178,9 @@
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
                 <p>常常會用到，備忘一下<br>在phpMyAdmin 裡面直接下下面的sql<br>前綴、舊 domain、新 domain 都記得改一下。就這樣</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">UPDATE 資料表前綴_options SET option_value = replace(option_value, &apos;舊 domain&apos;, &apos;新 domain&apos;) WHERE option_name = &apos;home&apos; OR option_name = &apos;siteurl&apos;;</span><br><span class="line"></span><br><span class="line">UPDATE 資料表前綴_posts SET guid = replace(guid, &apos;舊 domain&apos;,&apos;新 domain&apos;);</span><br><span class="line"></span><br><span class="line">UPDATE 資料表前綴_posts SET post_content = replace(post_content, &apos;舊 domain&apos;, &apos;新 domain&apos;);</span><br><span class="line"></span><br><span class="line">UPDATE 資料表前綴_postmeta SET meta_value = replace(meta_value,&apos;舊 domain&apos;,&apos;新 domain&apos;);</span><br></pre></td></tr></table></figure>
-<p>出處<br><a href="https://www.hostinger.com/tutorials/wordpress/how-to-change-wordpress-urls-in-mysql-database-using-phpmyadmin" target="_blank" rel="noopener">https://www.hostinger.com/tutorials/wordpress/how-to-change-wordpress-urls-in-mysql-database-using-phpmyadmin</a></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">UPDATE 資料表前綴_options SET option_value &#x3D; replace(option_value, &#39;舊 domain&#39;, &#39;新 domain&#39;) WHERE option_name &#x3D; &#39;home&#39; OR option_name &#x3D; &#39;siteurl&#39;;</span><br><span class="line"></span><br><span class="line">UPDATE 資料表前綴_posts SET guid &#x3D; replace(guid, &#39;舊 domain&#39;,&#39;新 domain&#39;);</span><br><span class="line"></span><br><span class="line">UPDATE 資料表前綴_posts SET post_content &#x3D; replace(post_content, &#39;舊 domain&#39;, &#39;新 domain&#39;);</span><br><span class="line"></span><br><span class="line">UPDATE 資料表前綴_postmeta SET meta_value &#x3D; replace(meta_value,&#39;舊 domain&#39;,&#39;新 domain&#39;);</span><br></pre></td></tr></table></figure>
+
+<p>出處<br><a target="_blank" rel="noopener" href="https://www.hostinger.com/tutorials/wordpress/how-to-change-wordpress-urls-in-mysql-database-using-phpmyadmin">https://www.hostinger.com/tutorials/wordpress/how-to-change-wordpress-urls-in-mysql-database-using-phpmyadmin</a></p>
 
                 <hr>
                 
@@ -325,7 +332,7 @@ s.setAttribute('data-timestamp', +new Date());
                     <br>
                     <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
                     <br>
-                    Theme by <a href="https://haojen.github.io/">Haojen Ma</a>
+                    Theme by <a target="_blank" rel="noopener" href="https://haojen.github.io/">Haojen Ma</a>
                 </p>
 
             </div>
@@ -334,13 +341,19 @@ s.setAttribute('data-timestamp', +new Date());
 </footer>
 
 <!-- jQuery -->
+
 <script src="/blog/js/jquery.min.js"></script>
 
+
 <!-- Bootstrap Core JavaScript -->
+
 <script src="/blog/js/bootstrap.min.js"></script>
 
+
 <!-- Custom Theme JavaScript -->
+
 <script src="/blog/js/blog.js"></script>
+
 
 <!-- async load function -->
 <script>

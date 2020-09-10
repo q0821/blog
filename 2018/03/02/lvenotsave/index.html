@@ -25,14 +25,20 @@
     <link rel="canonical" href="https://q0821.github.io/blog/blog/2018/03/02/lvenotsave/">
 
     <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="/blog/css/bootstrap.min.css">
+    
+<link rel="stylesheet" href="/blog/css/bootstrap.min.css">
+
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/blog/css/blog-style.css">
+    
+<link rel="stylesheet" href="/blog/css/blog-style.css">
+
 
     <!-- Pygments Github CSS -->
-    <link rel="stylesheet" href="/blog/css/syntax.css">
-</head>
+    
+<link rel="stylesheet" href="/blog/css/syntax.css">
+
+<meta name="generator" content="Hexo 5.1.1"></head>
 
 <style>
 
@@ -174,7 +180,7 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <p>今天客戶的網站因為人數太多導致 Resource Limit Is Reached，想到我們的主機有使用 Cloudlinux，裡面的 Concurrent Connections 設定了一個數值 ，已經滿了，於是在 WHM 後台的 LVE 管理器，要設定這個客戶，提升他的 Concurrent Connections，讓他可以恢復正常連線，但是設定好後，畫面卻一直停留在 Saved settings…，沒有辦法順利儲存。<br>後來 Shingo 找了找論壇，看到了這篇<a href="https://forums.cpanel.net/threads/settings-are-not-being-saved-in-the-cloudlinux-lve-manager.519291/" title="Settings are not being saved in the CloudLinux LVE Manager" target="_blank" rel="noopener">Settings are not being saved in the CloudLinux LVE Manager</a>，裡面提到執行以下指令，就可以順利儲存設定了。<br><code>yum install lvemanager</code><br>ssh 登入執行後，在 WHM 的介面裡面的 LVE 管理器就更新了，就可以順利儲存了。</p>
+                <p>今天客戶的網站因為人數太多導致 Resource Limit Is Reached，想到我們的主機有使用 Cloudlinux，裡面的 Concurrent Connections 設定了一個數值 ，已經滿了，於是在 WHM 後台的 LVE 管理器，要設定這個客戶，提升他的 Concurrent Connections，讓他可以恢復正常連線，但是設定好後，畫面卻一直停留在 Saved settings…，沒有辦法順利儲存。<br>後來 Shingo 找了找論壇，看到了這篇<a target="_blank" rel="noopener" href="https://forums.cpanel.net/threads/settings-are-not-being-saved-in-the-cloudlinux-lve-manager.519291/" title="Settings are not being saved in the CloudLinux LVE Manager">Settings are not being saved in the CloudLinux LVE Manager</a>，裡面提到執行以下指令，就可以順利儲存設定了。<br><code>yum install lvemanager</code><br>ssh 登入執行後，在 WHM 的介面裡面的 LVE 管理器就更新了，就可以順利儲存了。</p>
 <p>順帶一提 LVE 管理器的設定值的英文說明</p>
 <ul>
 <li>ID：user name if LVE id matches user id in /etc/passwd, or LVE id</li>
@@ -340,7 +346,7 @@ s.setAttribute('data-timestamp', +new Date());
                     <br>
                     <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
                     <br>
-                    Theme by <a href="https://haojen.github.io/">Haojen Ma</a>
+                    Theme by <a target="_blank" rel="noopener" href="https://haojen.github.io/">Haojen Ma</a>
                 </p>
 
             </div>
@@ -349,13 +355,19 @@ s.setAttribute('data-timestamp', +new Date());
 </footer>
 
 <!-- jQuery -->
+
 <script src="/blog/js/jquery.min.js"></script>
 
+
 <!-- Bootstrap Core JavaScript -->
+
 <script src="/blog/js/bootstrap.min.js"></script>
 
+
 <!-- Custom Theme JavaScript -->
+
 <script src="/blog/js/blog.js"></script>
+
 
 <!-- async load function -->
 <script>
