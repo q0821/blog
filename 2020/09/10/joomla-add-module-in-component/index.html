@@ -38,7 +38,7 @@
     
 <link rel="stylesheet" href="/blog/css/syntax.css">
 
-<meta name="generator" content="Hexo 5.1.1"></head>
+<meta name="generator" content="Hexo 6.0.0"></head>
 
 <style>
 
@@ -175,7 +175,7 @@
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
                 <p>那天有個客戶需求，要在 Joomla 的 eventbooking 單一 event，顯示相關 event，<br>但是本來沒有這個功能，<br>看了看可以透過把 upcoming events 動態給category_id，來達到一樣的效果，<br>查了一下可以透過一下語法，在版型插入任何模組檔案</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line"></span><br><span class="line">jimport(&#39;joomla.application.module.helper&#39;);</span><br><span class="line">$document &#x3D; &amp;JFactory::getDocument();</span><br><span class="line">$renderer &#x3D; $document-&gt;loadRenderer(&#39;module&#39;);</span><br><span class="line">&#x2F;&#x2F; 給模組設定值</span><br><span class="line">$params &#x3D; array(</span><br><span class="line">  &#39;layout&#39; &#x3D;&gt; &#39;ninenine:relatedevents&#39;,</span><br><span class="line">  &#39;category_ids&#39; &#x3D;&gt; $item-&gt;categories[0]-&gt;id,</span><br><span class="line">  &#39;number_events&#39; &#x3D;&gt; 3,</span><br><span class="line">  &#39;show_thumb&#39; &#x3D;&gt; 1,</span><br><span class="line">  &#39;show_category&#39; &#x3D;&gt; 0,</span><br><span class="line"></span><br><span class="line">);</span><br><span class="line">$Mod_eb_events &#x3D; JModuleHelper::getModule(&#39;mod_eb_events&#39;); &#x2F;&#x2F; 這寫模組名稱</span><br><span class="line">$Mod_eb_events-&gt;params &#x3D; $params;</span><br><span class="line">$moduleHtml &#x3D; $renderer-&gt;render($Mod_eb_events);</span><br><span class="line">echo $moduleHtml;</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line"></span><br><span class="line">jimport(&#x27;joomla.application.module.helper&#x27;);</span><br><span class="line">$document = &amp;JFactory::getDocument();</span><br><span class="line">$renderer = $document-&gt;loadRenderer(&#x27;module&#x27;);</span><br><span class="line">// 給模組設定值</span><br><span class="line">$params = array(</span><br><span class="line">  &#x27;layout&#x27; =&gt; &#x27;ninenine:relatedevents&#x27;,</span><br><span class="line">  &#x27;category_ids&#x27; =&gt; $item-&gt;categories[0]-&gt;id,</span><br><span class="line">  &#x27;number_events&#x27; =&gt; 3,</span><br><span class="line">  &#x27;show_thumb&#x27; =&gt; 1,</span><br><span class="line">  &#x27;show_category&#x27; =&gt; 0,</span><br><span class="line"></span><br><span class="line">);</span><br><span class="line">$Mod_eb_events = JModuleHelper::getModule(&#x27;mod_eb_events&#x27;); // 這寫模組名稱</span><br><span class="line">$Mod_eb_events-&gt;params = $params;</span><br><span class="line">$moduleHtml = $renderer-&gt;render($Mod_eb_events);</span><br><span class="line">echo $moduleHtml;</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
 
 <p>參考資料：</p>
 <ul>
@@ -186,6 +186,11 @@
                 
 
                 <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/blog/2022/01/14/reinstall-macos-monterey/" data-toggle="tooltip" data-placement="top"
+                           title="macOS 12 Monterey 重新安裝記錄">&larr; Previous Post</a>
+                    </li>
                     
                     
                     <li class="next">
@@ -320,7 +325,7 @@ s.setAttribute('data-timestamp', +new Date());
 
                 </ul>
                 <p class="copyright text-muted">
-                    Copyright &copy; 硬碟裡的雜七雜八 2020
+                    Copyright &copy; 硬碟裡的雜七雜八 2022
                     <br>
                     <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
                     <br>
